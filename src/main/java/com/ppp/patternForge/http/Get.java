@@ -1,4 +1,8 @@
 package com.ppp.patternForge.http;
 
-public class Get {
+public record Get(String path) implements HttpRequest {
+    public Get {
+        if (path == null || path.isBlank()) throw new IllegalArgumentException("path required");
+    }
 }
+

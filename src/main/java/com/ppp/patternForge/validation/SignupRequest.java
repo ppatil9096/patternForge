@@ -1,4 +1,6 @@
 package com.ppp.patternForge.validation;
 
-public class SignupRequest {
+import com.ppp.patternForge.model.User;
+
+public record SignupRequest(User user, String email, String password) {
 }

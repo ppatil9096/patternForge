@@ -1,4 +1,6 @@
 package com.ppp.patternForge.http;
 
-public class HttpRequest {
+public sealed interface HttpRequest permits Get, Post {
+    String path();
 }
+

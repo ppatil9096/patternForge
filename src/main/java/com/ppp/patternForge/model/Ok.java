@@ -1,4 +1,8 @@
 package com.ppp.patternForge.model;
 
-public class Ok {
+public record Ok<T>(T value) implements Result<T>{
+    @Override
+    public boolean isOk() {
+        return true;
+    }
 }
